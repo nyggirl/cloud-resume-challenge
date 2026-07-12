@@ -27,3 +27,28 @@ output "cloudfront_url" {
   description = "HTTPS URL for the CloudFront-hosted website."
   value       = "https://${aws_cloudfront_distribution.website.domain_name}"
 }
+
+output "visitor_counter_table_name" {
+  description = "Name of the DynamoDB table storing the visitor count."
+  value       = aws_dynamodb_table.visitor_counter.name
+}
+
+output "visitor_counter_table_arn" {
+  description = "ARN of the DynamoDB table storing the visitor count."
+  value       = aws_dynamodb_table.visitor_counter.arn
+}
+
+output "visitor_counter_lambda_name" {
+  description = "Name of the visitor counter Lambda function."
+  value       = aws_lambda_function.visitor_counter.function_name
+}
+
+output "visitor_counter_lambda_arn" {
+  description = "ARN of the visitor counter Lambda function."
+  value       = aws_lambda_function.visitor_counter.arn
+}
+
+output "visitor_counter_api_url" {
+  description = "Public endpoint for the visitor counter API."
+  value       = "${aws_apigatewayv2_api.visitor_counter.api_endpoint}/visitor-count"
+}

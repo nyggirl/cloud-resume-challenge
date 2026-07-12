@@ -26,3 +26,6 @@ override.tf.json
 
 # Logs
 *.log
+
+# Lambda build artifacts
+*.zip
