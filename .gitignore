@@ -29,3 +29,6 @@ override.tf.json
 
 # Lambda build artifacts
 *.zip
+
+# Python virtual environment
+.venv/
