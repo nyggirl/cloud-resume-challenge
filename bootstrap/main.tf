@@ -356,3 +356,21 @@ resource "aws_iam_role_policy" "github_actions_deployment" {
   policy = data.aws_iam_policy_document.github_actions_deployment.json
 }
 
+resource "aws_iam_role" "github_actions_plan" {
+  name = "cloud-resume-github-actions-plan-role"
+
+  assume_role_policy   = data.aws_iam_policy_document.github_actions_assume_role.json
+  max_session_duration = 3600
+}
+
+resource "aws_iam_role_policy_attachment" "github_actions_plan_read_only" {
+  role       = aws_iam_role.github_actions_plan.name
+  policy_arn = "arn:aws:iam::aws:policy/ReadOnlyAccess"
+}
+
+resource "aws_iam_role_policy" "github_actions_plan_state_access" {
+  name = "cloud-resume-github-actions-plan-state-access"
+  role = aws_iam_role.github_actions_plan.id
+
+  policy = data.aws_iam_policy_document.github_actions_state_access.json
+}
