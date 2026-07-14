@@ -178,7 +178,8 @@ data "aws_iam_policy_document" "github_actions_deployment" {
       "s3:GetBucketCORS",
       "s3:GetBucketVersioning",
       "s3:GetAccelerateConfiguration",
-      "s3:GetBucketRequestPayment"
+      "s3:GetBucketRequestPayment",
+      "s3:GetBucketLogging"
     ]
 
     resources = [
