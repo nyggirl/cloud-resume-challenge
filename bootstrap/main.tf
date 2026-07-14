@@ -177,7 +177,8 @@ data "aws_iam_policy_document" "github_actions_deployment" {
       "s3:GetBucketAcl",
       "s3:GetBucketCORS",
       "s3:GetBucketVersioning",
-      "s3:GetAccelerateConfiguration"
+      "s3:GetAccelerateConfiguration",
+      "s3:GetBucketRequestPayment"
     ]
 
     resources = [
@@ -260,7 +261,8 @@ data "aws_iam_policy_document" "github_actions_deployment" {
       "lambda:GetPolicy",
       "lambda:TagResource",
       "lambda:UntagResource",
-      "lambda:ListVersionsByFunction"
+      "lambda:ListVersionsByFunction",
+      "lambda:GetFunctionCodeSigningConfig"
     ]
 
     resources = [
