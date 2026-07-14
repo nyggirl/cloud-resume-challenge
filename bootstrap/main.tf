@@ -173,7 +173,8 @@ data "aws_iam_policy_document" "github_actions_deployment" {
       "s3:GetBucketTagging",
       "s3:PutBucketTagging",
       "s3:GetBucketLocation",
-      "s3:ListBucket"
+      "s3:ListBucket",
+      "s3:GetBucketAcl"
     ]
 
     resources = [
@@ -230,7 +231,8 @@ data "aws_iam_policy_document" "github_actions_deployment" {
       "dynamodb:UpdateTable",
       "dynamodb:DeleteTable",
       "dynamodb:TagResource",
-      "dynamodb:UntagResource"
+      "dynamodb:UntagResource",
+      "dynamodb:DescribeContinuousBackups"
     ]
 
     resources = [
