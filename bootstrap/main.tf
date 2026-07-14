@@ -176,7 +176,8 @@ data "aws_iam_policy_document" "github_actions_deployment" {
       "s3:ListBucket",
       "s3:GetBucketAcl",
       "s3:GetBucketCORS",
-      "s3:GetBucketVersioning"
+      "s3:GetBucketVersioning",
+      "s3:GetAccelerateConfiguration"
     ]
 
     resources = [
@@ -258,7 +259,8 @@ data "aws_iam_policy_document" "github_actions_deployment" {
       "lambda:RemovePermission",
       "lambda:GetPolicy",
       "lambda:TagResource",
-      "lambda:UntagResource"
+      "lambda:UntagResource",
+      "lambda:ListVersionsByFunction"
     ]
 
     resources = [
