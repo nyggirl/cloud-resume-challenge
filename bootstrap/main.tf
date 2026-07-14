@@ -162,26 +162,51 @@ data "aws_iam_policy_document" "github_actions_deployment" {
     effect = "Allow"
 
     actions = [
-      "s3:GetBucketPolicy",
-      "s3:PutBucketPolicy",
-      "s3:DeleteBucketPolicy",
-      "s3:GetBucketWebsite",
-      "s3:PutBucketWebsite",
-      "s3:DeleteBucketWebsite",
-      "s3:GetBucketPublicAccessBlock",
-      "s3:PutBucketPublicAccessBlock",
-      "s3:GetBucketTagging",
-      "s3:PutBucketTagging",
-      "s3:GetBucketLocation",
-      "s3:ListBucket",
-      "s3:GetBucketAcl",
-      "s3:GetBucketCORS",
-      "s3:GetBucketVersioning",
+
       "s3:GetAccelerateConfiguration",
-      "s3:GetBucketRequestPayment",
+
+      "s3:GetBucketAcl",
+
+      "s3:GetBucketCORS",
+
+      "s3:GetBucketLocation",
+
       "s3:GetBucketLogging",
+
+      "s3:GetBucketPolicy",
+
+      "s3:GetBucketPolicyStatus",
+
+      "s3:GetBucketPublicAccessBlock",
+
+      "s3:GetBucketRequestPayment",
+
+      "s3:GetBucketTagging",
+
+      "s3:GetBucketVersioning",
+
+      "s3:GetBucketWebsite",
+
+      "s3:GetEncryptionConfiguration",
+
       "s3:GetLifecycleConfiguration",
-      "s3:GetReplicationConfiguration"
+
+      "s3:GetReplicationConfiguration",
+
+      "s3:ListBucket",
+
+      "s3:DeleteBucketPolicy",
+
+      "s3:DeleteBucketWebsite",
+
+      "s3:PutBucketPolicy",
+
+      "s3:PutBucketPublicAccessBlock",
+
+      "s3:PutBucketTagging",
+
+      "s3:PutBucketWebsite"
+
     ]
 
     resources = [
