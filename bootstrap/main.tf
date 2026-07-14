@@ -374,3 +374,8 @@ resource "aws_iam_role_policy" "github_actions_plan_state_access" {
 
   policy = data.aws_iam_policy_document.github_actions_state_access.json
 }
+
+resource "aws_iam_role_policy_attachment" "github_actions_deployment_read_only" {
+  role       = aws_iam_role.github_actions.name
+  policy_arn = "arn:aws:iam::aws:policy/ReadOnlyAccess"
+}
