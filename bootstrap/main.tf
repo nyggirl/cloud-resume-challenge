@@ -175,7 +175,8 @@ data "aws_iam_policy_document" "github_actions_deployment" {
       "s3:GetBucketLocation",
       "s3:ListBucket",
       "s3:GetBucketAcl",
-      "s3:GetBucketCORS"
+      "s3:GetBucketCORS",
+      "s3:GetBucketVersioning"
     ]
 
     resources = [
@@ -234,7 +235,8 @@ data "aws_iam_policy_document" "github_actions_deployment" {
       "dynamodb:TagResource",
       "dynamodb:UntagResource",
       "dynamodb:DescribeContinuousBackups",
-      "dynamodb:DescribeTimeToLive"
+      "dynamodb:DescribeTimeToLive",
+      "dynamodb:ListTagsOfResource"
     ]
 
     resources = [

@@ -9,6 +9,7 @@ on:
       - "backend/**"
       - "frontend/**"
       - ".github/workflows/terraform-plan.yml"
+      - "bootstrap/**"
 
   workflow_dispatch:
 
