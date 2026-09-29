@@ -791,3 +791,7 @@ footer a {
         0 0 0 1px #dbeafe;
 }
 
+/* Space between professional experience cards */
+#experience .experience-card + .experience-card {
+    margin-top: 24px;
+}
